@@ -18,25 +18,10 @@ else
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-<?php if ($lookup == "cities"): ?>
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>District</th>
-			<th>Population</th>
-		</tr>
-	<?php foreach ($results as $row): ?>
-		<tr>
-	  		<td><?= $row['name'];?></td>
-	  		<td><?= $row['district'];?></td>
-	  		<td><?= $row['population'];?></td>
-	  	</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif;?>
+
 
 <?php if ($lookup == "countries"): ?>
-<table>
+<table  border="3">
 	<tr>
 		<th>Country Name</th>
 		<th>Continent</th>
@@ -55,7 +40,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php endif;?>
 
 <?php if ($lookup == "cities"): ?>
-	<table>
+	<table border="3">
 		<tr>
 			<th>Name</th>
 			<th>District</th>
